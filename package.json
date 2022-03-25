@@ -1,0 +1,97 @@
+{
+  "config": {
+    "extraResources": {
+      "extraFiles": [
+        {
+          "from": "static",
+          "to": "static/assets/",
+          "filter": [
+            "**/*"
+          ]
+        }
+      ]
+    }
+  },
+  "proxy": "http://localhost:8087",
+  "name": "electron-temp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "electron:build64": "vue-cli-service electron:build --x64 ",
+    "electron:build32": "vue-cli-service electron:build --ia32",
+    "electron:serve": "vue-cli-service electron:serve",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps"
+  },
+  "main": "background.js",
+  "publish": [
+    {
+      "provider": "generic",
+      "url": "http://127.0.0.1:9090/test/electron/"
+    }
+  ],
+  "dependencies": {
+    "ant-design-vue": "^1.7.4",
+    "chokidar": "^1.5.2",
+    "cookie-parser": "^1.4.6",
+    "core-js": "^3.6.5",
+    "cron": "^1.8.2",
+    "electron-store": "^7.0.3",
+    "electron-updater": "^3.2.3",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "express-session": "^1.17.2",
+    "gm-crypto": "^0.1.8",
+    "jsonwebtoken": "^8.5.1",
+    "log4js": "^6.4.2",
+    "moment": "^2.29.1",
+    "mysql": "^2.18.1",
+    "node-adodb": "^5.0.3",
+    "node-schedule": "^2.0.0",
+    "node-xlrd": "^0.3.10",
+    "node-xlsx": "^0.16.1",
+    "pyfl": "^1.1.4",
+    "qs": "latest",
+    "request": "^2.72.0",
+    "vue": "^2.6.11",
+    "vue-router": "^3.5.1",
+    "vuex": "^3.6.2",
+    "websocket": "^1.0.34"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "crypto-js": "^4.0.0",
+    "electron": "^11.0.0",
+    "electron-devtools-installer": "^3.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "url-loader": "^2.3.0",
+    "vue-cli-plugin-electron-builder": "~2.0.0-rc.6",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
