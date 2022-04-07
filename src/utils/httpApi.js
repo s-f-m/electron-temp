@@ -112,7 +112,7 @@ export default function () {
 
     });
     // api.use(log4js.connectLogger(logger,  {level:'auto', format: (req, res, format) =>format(`:method :url  :status  :response-time ms ${JSON.stringify(req.body)}`)}));
-    api.listen(3000)
+    api.listen( <%=port%> )
 
     api.get('/token', function (req, res, next) {
         req.query.id

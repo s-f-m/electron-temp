@@ -11,19 +11,6 @@ module.exports = {
                             filter: ["**/*"]
                         }
                     ],
-                publish: {
-                    provider: 'generic',
-                    url: 'http://localhost:9090/test/electron/'
-                },
-                win:{
-                    requestedExecutionLevel:"requireAdministrator",
-                    extraResources: [
-                        {
-                            from: ".\\node_modules\\node-adodb\\lib\\adodb.js",
-                            to: "adodb.js"
-                        }
-                    ]
-                },
                 nsis:{
                     oneClick : false,
                     allowElevation:false,

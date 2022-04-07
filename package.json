@@ -13,8 +13,10 @@
     }
   },
   "proxy": "http://localhost:8087",
-  "name": "electron-temp",
+  "name": "<%=name%>",
   "version": "0.0.1",
+  "author": "<%=author%>",
+  "description": "<%=description%>",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
